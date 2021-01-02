@@ -56,7 +56,7 @@ int main(int argc, char * argv [])
                 break;
 
             case 'h':
-                helpf(argv);
+                helpf();
                 break;
 
             case 's':
