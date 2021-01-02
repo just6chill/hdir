@@ -8,13 +8,13 @@
 #define WHITESPACE printf("\n");
 #define LINE printf("-------------------------------------");
 
-int filestat(char *args[]) {
+void filestat(char *file_path) {
 	
 	struct stat attribute;
-	stat(args[2], &attribute);
+	stat(file_path, &attribute);
 	
 	WHITESPACE
-	printf("stats of %s: \n", args[2]);
+	printf("stats of %s: \n", file_path);
 	LINE
 	WHITESPACE
 	printf("size in bytes: %ld \n", attribute.st_size);
