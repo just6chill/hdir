@@ -3,36 +3,46 @@
 #include <stdlib.h>
 #include <time.h>
 
-int copyfile(char* args[]){
-	
-	FILE *q, *z;
-	static char puffer1[BUFSIZ];
-	static char puffer2[BUFSIZ];
-	int c;
-	time_t t1 = time(NULL);
-	
-	printf("starting copy process \n");
-	
-	q = fopen(args[2], "rb");
-	if(q != NULL) {
-		z = fopen(args[3], "wb");
-		if(NULL == z) {
-			printf("could not open %s", args[3]);
-			return 1;
-		}
-	}
-	else {
-		printf("could not open %s", args[2]);
-		return 1;
-	}
-	setbuf(q,puffer1);
-	setbuf(z,puffer2);
-	
-	while((c = getc(q)) != EOF)
-		putc(c,z);
-	
-	fclose(q);
-	fclose(z);
-	
-	printf("copied in %d sec.", time(NULL)-1);
+int copyfile(char * sourcePath, char * destPath)
+{
+
+    FILE *      source;
+    FILE *      dest;
+    static char puffer1 [BUFSIZ];
+    static char puffer2 [BUFSIZ];
+    int         character;
+    time_t      t1 = time(NULL);
+
+    printf("Starting copy process \n");
+
+    /* --------------------------
+     * Try to open each file 
+     * -------------------------- */
+    source = fopen(sourcePath, "rb");
+    dest = fopen(destPath, "wb");
+
+    // Error reports
+    if (source == NULL) {
+        printf("Couldn't open sourcefile!\n");
+        return 1;
+    } else if (dest == NULL) {
+        printf("Couldn't open destination file!\n");
+        return 2;
+    }
+
+    /* --------------------------
+     * Content transferation 
+     * -------------------------- */
+    setbuf(source, puffer1);
+    setbuf(dest, puffer2);
+
+    while ((character = getc(source)) != EOF)
+        putc(character, dest);
+
+    fclose(source);
+    fclose(dest);
+
+    printf("Copied in %ld sec.\n", time(NULL) - 1);
+
+    return 0;
 }

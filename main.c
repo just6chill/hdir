@@ -19,11 +19,11 @@ int main(int argc, char* argv[]) {
 	{
 		case 'r': renamefile(argv); break;
 		
-		case 'c': copyfile(argv); break;
+		case 'c': copyfile(argv[2], argv[3]); break;
 		
 		case 'd': delfile(argv); break;
 		
-		case 'f': newdir(argv); break;
+		case 'f': newdir(argv[2]); break;
 		
 		case 'n': newfile(argv); break;
 		
@@ -33,10 +33,12 @@ int main(int argc, char* argv[]) {
 		
 		case 'h': helpf(argv); break;
 		
-		case 's': filestat(argv); break;
+		case 's': filestat(argv[2]); break;
 		
 		default:
 			printf("type 'hdir h' without ' ' and try again");
 			return EXIT_FAILURE;
 	}
+
+    return EXIT_SUCCESS;
 }
