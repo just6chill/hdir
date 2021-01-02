@@ -10,6 +10,7 @@
 #include "deldir.h"
 #include "dirstat.h"
 #include "helpf.h"
+#include "filestat.h"
 
 int main(int argc, char* argv[]) {
 	
@@ -31,6 +32,8 @@ int main(int argc, char* argv[]) {
 		case 'l': dirstat(argv); break;
 		
 		case 'h': helpf(argv); break;
+		
+		case 's': filestat(argv); break;
 		
 		default:
 			printf("type 'hdir h' without ' ' and try again");

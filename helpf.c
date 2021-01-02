@@ -10,11 +10,11 @@ int helpf(char *args[]) {
 	WHITESPACE
 	printf("suffix: \n");
 	WHITESPACE
-	printf("r: rename a file or a folder \nExample: 'hdir r examplefile newname' \n ");
+	printf("r: rename a file or a folder \nExample: 'hdir r example.txt newname.txt' \n ");
 	WHITESPACE
-	printf("c: copy a file \nExample: 'hdir c examplefile newfilename' \n ");
+	printf("c: copy a file \nExample: 'hdir c example.txt newfile.txt' \n ");
 	WHITESPACE
-	printf("d: delete a file \nExample: 'hdir d examplefile'	\n ");
+	printf("d: delete a file \nExample: 'hdir d example.txt'	\n ");
 	WHITESPACE
 	printf("f: create a folder \nExample: 'hdir f examplefoldername' \n ");
 	WHITESPACE
@@ -23,6 +23,8 @@ int helpf(char *args[]) {
 	printf("k: delete a folder \nExample: 'hdir k examplefolder' \n ");
 	WHITESPACE
 	printf("l: show all files and subfolders of the named folder/directory \nExample: 'hdir l examplefolder' \n ");
+	WHITESPACE
+	printf("s: show stats of a file (size, perms, last change, user-id, drive) \nExample: 'hdir s example.txt' \n");
 	WHITESPACE
 	printf("h: type 'hdir h' for help");
 	WHITESPACE
