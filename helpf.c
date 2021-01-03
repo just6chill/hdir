@@ -4,7 +4,7 @@
 
 #define WHITESPACE printf("\n");
 
-int helpf(char *args[]) {
+int helpf() {
 	
 	printf("syntax: 'hdir <suffix> <parameter1> <parameter2>' \n ");
 	WHITESPACE

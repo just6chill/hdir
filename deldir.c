@@ -4,14 +4,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int deldir(char * args [])
+int deldir(char * path)
 {
-    if (rmdir(args [2]) == -1) {
-        printf("could not delete %s", args [2]);
+    if (rmdir(path) == -1) {
+        printf("could not delete %s\n", path);
         return 1;
     }
 
-    printf("succesfully deleted %s", args [2]);
+    printf("succesfully deleted %s\n", path);
 
     return 0;
 }

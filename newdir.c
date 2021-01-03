@@ -4,14 +4,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int newdir(char * dir_name) {
+int newdir(char * path) {
 
-	if(mkdir(dir_name) == -1) {
+	if(mkdir(path) == -1) {
 		printf("could not create dir\n");
         return 1;
     }
 
-	printf("created dir %s\n", dir_name);
+	printf("created dir %s\n", path);
 	
 	return 0;
 }

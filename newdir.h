@@ -3,7 +3,7 @@
 
 /*
  * Parameters:
- *  - dir_name: The name of the directory to create.
+ *  - path: The path to the directory
  *
  * Return values:
  *	 0: Creating directory succeeded
@@ -11,6 +11,6 @@
  *
  *	 A little log message if it worked or not, will be printed as well
  */
-int newdir(char * dir_name);
+int newdir(char * path);
 
 #endif

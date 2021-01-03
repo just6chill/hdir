@@ -1,6 +1,10 @@
 #ifndef _HELPF_H_
 #define _HELPF_H_
 
-int helpf(char *args[]);
+/*
+ * What does it do?
+ *	It prints the help page for the program.
+ */
+int helpf();
 
 #endif
