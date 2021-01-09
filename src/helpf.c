@@ -18,9 +18,9 @@ int helpf(char *args[]) {
 	WHITESPACE
 	printf("'"); green("d"); printf("' - delete a file \n    Example: 'hdir d example.txt'	\n ");
 	WHITESPACE
-	printf("'"); green("f"); printf("' - create a folder \n    Example: 'hdir f examplefoldername' \n ");
+	printf("'"); green("f"); printf("' - create a folder \n    Example: 'hdir f folder1 folder2 foldern'  \n ");
 	WHITESPACE
-	printf("'"); green("n"); printf("' - create a file with given extension \n    Example: 'hdir n example.txt' \n ");
+	printf("'"); green("n"); printf("' - create a file with given extension \n    Example: 'hdir n example.txt example1.txt examplen.txt' \n ");
 	WHITESPACE
 	printf("'"); green("k"); printf("' - delete a folder \n    Example: 'hdir k examplefolder' \n ");
 	WHITESPACE
@@ -29,6 +29,7 @@ int helpf(char *args[]) {
 	printf("'"); green("s"); printf("' - show stats of a file (size, perms, last change, user-id, drive) \n    Example: 'hdir s example.txt' \n");
 	WHITESPACE
 	printf("'"); green("h"); printf("' - type 'hdir h' for help \n");
+	printf("several parameters only allowed with create a folder or file as explained in the examples \n");
 	WHITESPACE
 	printf("hdir made by "); green("just6chill"); printf("(github/xda)"); 
 
