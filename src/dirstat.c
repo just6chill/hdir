@@ -4,9 +4,9 @@
 #include <dirent.h>
 #include <stdio.h>
 
-int dirstat(char* args []) {
+int dirstat(char* args[]) {
     DIR *dir;
-    struct dirent * dirpointer;
+    struct dirent *dirpointer;
 
     if ((dir = opendir(args [2])) != NULL) {
         while ((dirpointer = readdir(dir)) != NULL)
