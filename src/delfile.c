@@ -14,7 +14,7 @@ int delfile(char *args[]) {
 	 * to destroy the file                   */
     i = 0;
 	
-    FILE *rem = fopen(args [2], "w+b");
+    FILE *rem = fopen(args[2], "w+b");
     if (rem != NULL) {
         fseek(rem, 0L, SEEK_END);
         size = ftell(rem);
