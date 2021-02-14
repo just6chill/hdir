@@ -5,10 +5,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int deldir(char *args []) {
+int deldir(char *args[]) {
 	
 	//look if file could be deleted
-    if (rmdir(args [2]) == -1) {
+    if(rmdir(args [2]) == -1) {
        error(code[0]);
     }
 
