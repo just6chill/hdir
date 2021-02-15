@@ -8,8 +8,8 @@
 int deldir(char *args[]) {
 	
 	//look if file could be deleted
-    if(rmdir(args [2]) == -1) {
-       error(code[0]);
+    if(rmdir(args[2]) == -1) {
+       error(code[NO_FILE_DIR]);
     }
 
     printf("succesfully deleted %s", args [2]);

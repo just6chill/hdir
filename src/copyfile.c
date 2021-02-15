@@ -24,9 +24,9 @@ int copyfile(char* sourcePath, char* destPath) {
 
     // Error reports
     if (source == NULL) {
-        error(code[5]);
+        error(code[COPY_FILE_FAIL]);
     } else if (dest == NULL) {
-        error(code[5]);
+        error(code[COPY_FILE_FAIL]);
     }
 
     /* --------------------------
@@ -45,3 +45,4 @@ int copyfile(char* sourcePath, char* destPath) {
 
     return 0;
 }
+

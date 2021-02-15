@@ -29,14 +29,14 @@ int delfile(char *args[]) {
 
     else {
 		//if file does not exist
-        error(code[0]);
+        error(code[NO_FILE_DIR]);
     }
 
 
 	printf("start deleting file...\n");
 	
     if((remove(args[2])) < 0){
-		error(code[3]);
+		error(code[DELETE_FILE_DIR_FAIL]);
 	}
 	
 	printf("deleted %s", args[2]);
@@ -44,7 +44,7 @@ int delfile(char *args[]) {
 	//checking if the file is still existing
 	rem = fopen(args[2], "r");
 	if(rem != NULL) {
-		error(code[3]);
+		error(code[DELETE_FILE_DIR_FAIL]);
 	}
 	
     return 0;

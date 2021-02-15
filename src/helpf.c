@@ -31,7 +31,7 @@ int helpf(char *args[]) {
 	printf("'"); green("h"); printf("' - type 'hdir h' for help \n");
 	printf("several parameters only allowed with create a folder or file as explained in the examples \n");
 	WHITESPACE
-	printf("hdir made by "); green("just6chill"); printf("(github/xda)"); 
+	printf("hdir made by "); green("just6chill"); printf("(github)"); 
 
 	return 0;
 	

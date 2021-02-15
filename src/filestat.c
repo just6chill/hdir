@@ -15,7 +15,7 @@ void filestat(char *file_path) {
 	FILE *fp;
 	fp = fopen(file_path, "r");
 	if(fp == NULL) {
-		error(code[0]);
+		error(code[NO_FILE_DIR]);
 	}
 	
 	struct stat attribute;

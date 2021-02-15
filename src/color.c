@@ -30,10 +30,10 @@ void blue(char *text, ...){
 	
 	/* save current text color */
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    	CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
-    	WORD saved_attributes;
-    	GetConsoleScreenBufferInfo(hConsole, &consoleInfo);
-    	saved_attributes = consoleInfo.wAttributes;
+	CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
+	WORD saved_attributes;
+	GetConsoleScreenBufferInfo(hConsole, &consoleInfo);
+	saved_attributes = consoleInfo.wAttributes;
 	
 	va_list pointer;
 	va_start(pointer, text);
@@ -53,10 +53,10 @@ void red(char *text, ...){
 	
 	/* save current text color */
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    	CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
-    	WORD saved_attributes;
+	CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
+	WORD saved_attributes;
 	GetConsoleScreenBufferInfo(hConsole, &consoleInfo);
-    	saved_attributes = consoleInfo.wAttributes;
+	saved_attributes = consoleInfo.wAttributes;
 	
 	va_list pointer;
 	va_start(pointer, text);

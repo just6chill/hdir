@@ -16,6 +16,11 @@
 
 int main(int argc, char* argv[]) {
 	
+	if(argc < 2){
+
+		printf("type 'hdir h' without ' ' and try again\n");
+		error(code[INVALID_PARAMETER_NUM]);
+	}
 	
 	switch(argv[1][0]) 
 	{
@@ -39,7 +44,7 @@ int main(int argc, char* argv[]) {
 		
 		default:
 			printf("type 'hdir h' without ' ' and try again\n");
-			error(code[2]);
+			error(code[INVALID_PARAMETER_NUM]);
 	}
 
     return EXIT_SUCCESS;

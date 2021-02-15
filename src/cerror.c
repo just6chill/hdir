@@ -16,6 +16,16 @@ const char *code[7] = {
 	"could not rename file or directory\n"
 };
 
+/*-------------------------
+ *0 = NO_FILE_DIR
+ *1 = FILE_DIR_EXIST
+ *2 = INVALID_PARAMETER_NUM 
+ *3 = DELETE_FILE_DIR_FAIL
+ *4 = CREATE_FILE_DIR_FAIL
+ *5 = COPY_FILE_FAIL
+ *6 = RENAME_FILE_DIR_FAIL
+--------------------------*/
+
 int error(const char *code, ...) {
 	va_list pointer;
 	va_start(pointer, code);
@@ -28,6 +38,7 @@ int error(const char *code, ...) {
 	va_end(pointer);
 	
 }
+
 			
 			
 			

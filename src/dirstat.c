@@ -8,13 +8,13 @@ int dirstat(char* args[]) {
     DIR *dir;
     struct dirent *dirpointer;
 
-    if ((dir = opendir(args [2])) != NULL) {
-        while ((dirpointer = readdir(dir)) != NULL)
+    if((dir = opendir(args[2])) != NULL) {
+        while((dirpointer = readdir(dir)) != NULL)
             printf("%s\n", dirpointer->d_name);
     }
-    else {
+    else{
 		//if directory does not exist
-        error(code[0]);
+        error(code[NO_FILE_DIR]);
     }
     return 0;
 }

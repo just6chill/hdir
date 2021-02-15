@@ -15,7 +15,7 @@ int newfile(int counter, char *args[]) {
 		file = fopen(args[index], "r");
 		if(file != NULL) {
 			fclose(file);
-			error(code[1]);
+			error(code[FILE_DIR_EXIST]);
 		}
 	
 		else {
@@ -26,7 +26,7 @@ int newfile(int counter, char *args[]) {
 			file = fopen(args[index], "r");
 			if(file == NULL) {
 				fclose(file);
-				error(code[4]);
+				error(code[CREATE_FILE_DIR_FAIL]);
 			}
 		
 			printf("succesfully created %s\n", args[index]);
